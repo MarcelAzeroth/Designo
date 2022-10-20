@@ -1,0 +1,165 @@
+@import "../config.scss";
+@import "../responsive.scss";
+
+.hero-design{
+    background-color: $peach;
+    padding: 6.5rem 1.5rem;
+
+    @include tablet{
+        padding: 4rem;
+        margin: 0 2.5rem 0;
+        border-radius: 8px;
+    }
+    @include desktop{
+        max-width: 1111px;
+        width: 100%;
+        margin: auto;
+    }
+
+    &__content{
+        text-align: center;
+        color: #fff;
+
+        &__headline{
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            line-height: 36px;
+            font-weight: 500;
+        }
+        &__paragraph{
+            font-size: .9rem;
+            line-height: 25px;
+            font-weight: 400;
+
+            @include tablet{
+                width: 390px;
+                margin: auto;
+            }
+        }
+    }
+}
+
+.portfolio{
+    padding: 3.5rem 1.5rem 0;
+
+    @include tablet{
+        padding: 3.5rem 2.5rem 0;
+    }
+    @include desktop{
+        padding: 3.5rem 0 0;
+        max-width: 1111px;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+    }
+
+    &__item{
+        text-align: center;
+        border-radius: 15px;
+        margin-top: 2.5rem;
+
+        @include tablet{
+            display: flex;
+        }
+        @include desktop{
+            flex-direction: column;
+        }
+
+
+        &__image {
+            flex: 0 0 50%;
+            
+            & img{
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+    
+                @include tablet{
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: 15px;
+                }
+                @include desktop{
+                    border-top-right-radius: 15px;
+                    border-bottom-left-radius: 0;
+                }
+            }
+
+        }
+        
+
+        &__description{
+            background-color: $peach-light;
+            padding: 2rem 1.875rem;
+            flex: 1;
+            border-bottom-right-radius: 8px;
+            border-bottom-left-radius: 8px;
+
+            &:hover{
+                cursor: pointer;
+                background-color: $peach;
+                color: white;
+            }
+
+            &:hover h3{
+                color: #fff;
+            }
+            &:hover p{
+                color: #fff;
+            }
+
+            @include tablet{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-radius: 0;
+                border-top-right-radius: 8px;
+                border-bottom-right-radius: 8px;
+            }
+
+            @include desktop{
+                border-top-right-radius: 0;
+                border-bottom-left-radius: 8px;
+            }
+
+            &__headline{
+                color: $peach;
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                line-height: 26px;
+                letter-spacing: 5px;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+
+            &__paragraph{
+                line-height: 26px;
+                color: $dark-grey;
+                font-weight: 400;
+            }
+        }
+    }
+}
+
+.design-offers{
+    padding: 7.5rem 1.5rem;
+    display: flex; 
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include tablet{
+        padding: 7.5rem 2.5rem;
+    }
+    @include desktop{
+        padding: 7.5rem 0;
+        max-width: 1111px;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-bottom: 15rem;
+    }
+
+}

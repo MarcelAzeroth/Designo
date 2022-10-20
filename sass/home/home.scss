@@ -1,0 +1,319 @@
+@import "../config.scss";
+@import "../responsive.scss";
+
+.hero{
+    background-color: $peach;
+    padding: 5rem 1.5rem 0;
+
+    @include tablet{
+        padding: 3.75rem 3.75rem 0;
+        margin: 0 2.5rem 0;
+        border-radius: 8px;
+    }
+
+    @include desktop{
+        position: relative;
+        display: flex;
+        padding: 9rem 6rem;
+        max-width: 1111px;
+        width: 100%;
+        margin: auto;
+    }
+
+    &__content{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 5rem;
+        color: #ffffff;
+
+        @include tablet{
+            max-width: 573px;
+            margin: auto;
+            margin-bottom: 4.3125rem;
+        }
+
+        @include desktop{
+            text-align: left;
+            align-items: flex-start;
+            margin: 0;
+            gap: 1.5rem;
+        }
+
+        &__headline{
+            font-size: 2rem;
+            line-height: 36px;
+            font-weight: 500;
+
+            @include desktop{
+                font-size: 3rem;
+                line-height: 48px;
+            }
+        }
+
+        &__paragraph{
+            font-size: .9rem;
+            line-height: 25px;
+            font-weight: 400;
+
+            @include tablet{
+                max-width: 445px;
+                margin: auto;
+            }
+
+            @include desktop{
+                margin: 0;
+                font-size: 1rem;
+                line-height: 26px;
+            }
+        }
+
+        &__cta{
+            width: 160px;
+            padding: 1.125rem 1.5rem;
+            border-radius: 8px;
+            border-style: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 22px;
+            font-size: 15px;
+            font-weight: 500;
+            color: $dark-grey;
+            background-color: #ffffff;
+
+            &:hover{
+                cursor: pointer;
+                background-color: #FFAD9B;
+                color: #ffffff;
+            }
+        }
+    }
+
+    &__image{
+        width: 287px;
+        margin: auto;
+
+        @include desktop{
+            display: none;
+        }
+
+        &__desktop{
+            display: none;
+
+            @include desktop{
+                display: block;
+                position: absolute;
+                bottom: 0;
+                right: 120px;
+                width: 283px;
+            }
+        }
+    }
+}
+
+.offers{
+    padding: 7.5rem 1.5rem 0;
+    text-align: center;
+    display: flex; 
+    flex-direction: column;
+    gap: 1.5rem;
+
+    @include tablet{
+        padding: 7.5rem 2.5rem 0;
+    }
+
+    @include desktop{ 
+        padding: 7.5rem 0;
+        max-width: 1111px;
+        width: 100%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &__offer{
+        border-radius: 15px;
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        &__wd{
+            background-image: url('/assets/custom/background_wd.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @include tablet{
+                background-image: url('/assets/custom/background_wd_tablet.jpg');
+            }
+
+            @include desktop{
+                background-image: url('/assets/custom/background_wd_desktop.png');
+                grid-column: 1/2;
+                grid-row: 1/3;
+            }
+          
+        }
+
+        &__ad{
+            background-image: url('/assets/custom/background_ad.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+           @include tablet{
+                background-image: url('/assets/custom/background_addes_tablet.jpg');
+           }
+           @include desktop{
+            background-image: url('/assets/custom/background_addes_desktop.jpg');
+           }
+        }
+
+        &__gd{
+            background-image: url('/assets/custom/background_gd.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            @include tablet{
+                background-image: url('/assets/custom/background_gd_tablet.jpg');
+            }
+            @include desktop{
+                background-image: url('/assets/custom/background_gd_desktop.jpg');
+               }
+        }
+
+        &__headline{
+            font-size: 1.75rem;
+            line-height: 36px;
+            letter-spacing: 1.4px;
+            text-transform: uppercase;
+            font-weight: 500;
+
+            @include desktop{
+                font-size: 2.5rem;
+            }
+        
+        }
+
+        &__paragraph{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            font-size: .9rem;
+            line-height: 22px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+
+            & img{
+                width: 6px;
+                height: 8px;
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+
+.advantages{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: 7.5rem;
+
+    @include tablet{
+        padding: 0 2.5rem;
+        gap: 2rem;
+    }
+
+    @include desktop{
+        max-width: 1111px;
+        margin: auto;
+        flex-direction: row;
+        margin-bottom: 20rem;
+        padding: 0;
+        justify-content: space-between;
+    }
+
+    &__advantage{
+        padding: 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+
+        @include tablet{
+            flex-direction: row;
+            gap: 3rem;
+        }
+
+        @include desktop{
+            flex-direction: column;
+            gap: 3rem;
+            padding: 0;
+        }
+
+        &__image{
+            width: 202px;
+            margin: auto;
+        }
+    
+        &__headline{
+            color: $dark-grey;
+            font-size: 1.25rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+
+            @include tablet{
+                text-align: left;
+            }
+            @include desktop{
+                text-align: center;
+                margin-bottom: 3rem;
+            }
+        }
+
+        &__paragraph{
+            line-height: 26px;
+            text-align: center;
+            color: $dark-grey;
+            font-weight: 400;
+
+            @include tablet{
+                text-align: left;
+            }
+            @include desktop{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.orangeoverlay{
+    width: 100%;
+    height: 100%;
+    padding: 5.625rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    border-radius: 8px;
+    color: #ffffff;
+    
+    &:hover{
+        background-color: #e7826b80;
+    }
+
+    @include desktop{
+        gap: 1.5rem;
+    }
+}
+
+.wd-out{
+    @include desktop{
+        grid-row: 1/2;
+    }
+}
+

@@ -1,0 +1,212 @@
+@import "../config.scss";
+@import "../responsive.scss";
+
+.footer{
+    position: relative;
+    background-color: $black;
+    color: #ffffff;
+    padding: 15.85rem 1.5rem 4rem;
+    margin-top: 20rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+
+    @include tablet{
+        margin-top: 15rem;
+        padding-top: 13.5rem;
+    }
+
+    @include desktop{
+        padding: 12rem 1.5rem 4rem;
+        margin-top: 0;
+    }
+
+    &__getInTouch{
+        position: absolute;
+        max-width: 327px;
+        top: -200px;
+        background-color: $peach;
+        text-align: center;
+        padding: 4rem 1.5rem;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        @include tablet{
+            min-width: 90%;
+        }
+        @include desktop{
+            min-width: 1111px;
+            margin: auto;
+            padding: 4.75rem 6rem 2.875rem;
+        }
+
+        &__headline{
+            font-size: 2rem;
+            line-height: 36px;
+            font-weight: 500;
+
+            @include tablet{
+                margin: auto;
+                width: 335px;
+            }
+            @include desktop{
+                font-size: 2.5rem;
+                margin: 0;
+                text-align: left;
+            }
+        }
+
+        &__paragraph{
+            font-size: .9rem;
+            line-height: 25px;
+            font-weight: 400;
+            margin: auto;
+
+            @include tablet{
+                width: 573px;
+            }
+            @include desktop{
+                font-size: 1rem;
+                margin: 0;
+                text-align: left;
+            }
+        }
+
+        &__cta{
+            padding: 1.125rem;
+            text-transform: uppercase;
+            border-style: none;  
+            color: $dark-grey;
+            border-radius: 8px;
+            width: 152px;
+            margin: 1rem auto 0;
+
+            &:hover{
+                cursor: pointer;
+                background-color: #FFAD9B;
+                color: #ffffff;
+            }
+
+            @include desktop{
+                position: absolute;
+                right: 115px;
+                bottom: 50%;
+                transform: translateY(50%);
+            }
+        }
+    }
+
+    &__logo{
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+        & img{
+            width: 197px;
+            margin: 0 auto 2rem;
+
+            @include tablet{
+                margin: 0;
+            }
+        }
+
+        @include tablet{
+            border-bottom: none;
+        }
+    }
+
+    &__links{
+        color: #ffffff;
+        letter-spacing: 2px;
+        font-size: 0.875rem;
+        line-height: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+
+        @include tablet{
+            display: flex;
+            gap: 1rem;
+        }
+
+        &__link{
+            margin-top: 2rem;
+
+            @include tablet{
+                margin: 0;
+                width: 130px;
+            }
+        }
+    }
+
+    &__address{
+        text-align: center;
+        color: #ffffff50;
+        line-height: 26px;
+
+        @include tablet{
+            text-align: left;
+        }
+    }
+
+    &__contact{
+        text-align: center;
+        color: #ffffff50;
+        line-height: 26px;
+
+        @include tablet{
+            text-align: left;
+        }
+    }
+
+    &__socials{
+        display: flex;
+        gap: 1rem;
+
+        &__social{
+            & img{
+                width: 24px;
+            }
+        }
+    }
+}
+
+.contact-footer{
+    margin-top: 0;
+    padding-top: 4rem;
+}
+
+.footer-top{
+    width: 100%;
+
+    @include tablet{
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 2.875rem;
+    }
+    @include desktop{
+        max-width: 1111px;
+        margin: auto;
+    }
+}
+
+.footer-bottom{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    align-items: center;
+
+    @include tablet{
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+    @include desktop{
+        max-width: 1111px;
+        margin: auto;
+    }
+}

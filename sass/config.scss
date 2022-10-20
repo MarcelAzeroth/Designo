@@ -1,0 +1,31 @@
+$peach: #E7816B;
+$dark-grey: #333136;
+$black:  #1D1C1E;
+$peach-light: #FDF3F0;
+$button-hover: #FFAD9B;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+body{
+    font-family: 'Jost', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
