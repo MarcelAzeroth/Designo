@@ -24,8 +24,10 @@
 
     &__getInTouch{
         position: absolute;
-        max-width: 327px;
+        min-width: 327px;
         top: -200px;
+        right: 50%;
+        transform: translateX(50%);
         background-color: $peach;
         text-align: center;
         padding: 4rem 1.5rem;
